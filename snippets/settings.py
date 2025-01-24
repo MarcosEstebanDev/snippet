@@ -18,5 +18,7 @@ INSTALLED_APPS = [
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'  # or 'bootstrap5' if you are using Bootstrap 5
 
+STATIC_URL = '/static/'
+STATIC_ROOT = '/home/MarcosEsDev/snippet/static'  # Ruta donde se recopilarán los archivos estáticos
 
 # ...existing code...
