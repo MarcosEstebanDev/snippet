@@ -49,11 +49,9 @@ class SnippetDetails(View):
         snippet_id = self.kwargs["id"]
         snippet = get_object_or_404(Snippet, id=snippet_id)
         language = snippet.language.name  # Obtener el nombre del lenguaje
-        # Asegúrate de que el valor de language sea una cadena simple
         if '://' in language:
-            language = language.split('/')[-1]  # Extraer el lenguaje de la URL
-        else:
-            language = language  # Usar el nombre del lenguaje directamente si no es una URL
+            language = language.split('/')[-1]  
+            language = language  
         return render(
             request, 
             "snippets/snippet.html", 

@@ -11,11 +11,14 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 import os
 import sys
 
-path = '/home/MarcosEsDev/snippet'  # Ruta a tu proyecto
+# Ruta a tu proyecto Django
+path = '/home/MarcosEsDev/snippet'
 if path not in sys.path:
     sys.path.append(path)
 
+# Configura el módulo de settings de Django
 os.environ['DJANGO_SETTINGS_MODULE'] = 'snippet.settings'  # Cambia 'snippet' por el nombre de tu proyecto
 
+# Carga la aplicación WSGI de Django
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

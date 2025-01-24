@@ -28,3 +28,42 @@ Este proyecto fue desarrollado utilizando el framework Django. A continuación, 
    - Los snippets pueden ser públicos o privados.
    - Los snippets públicos son visibles para todos los usuarios.
    - Los snippets privados solo son visibles para el usuario que los creó.
+
+## Iniciar el Repositorio y Levantar de Manera Local
+
+Para iniciar y ejecutar el repositorio localmente, sigue estos pasos:
+
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/tu-usuario/snippet.git
+   cd snippet
+   ```
+
+2. **Crear y activar un entorno virtual**:
+   ```bash
+   python -m venv env
+   source env/bin/activate  # En Windows usa `env\Scripts\activate`
+   ```
+
+3. **Instalar las dependencias**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Aplicar las migraciones**:
+   ```bash
+   python manage.py migrate
+   ```
+
+5. **Crear un superusuario**:
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+6. **Ejecutar el servidor de desarrollo**:
+   ```bash
+   python manage.py runserver
+   ```
+
+7. **Acceder a la aplicación**:
+   Abre tu navegador y ve a `http://127.0.0.1:8000/` para ver la aplicación en funcionamiento.
