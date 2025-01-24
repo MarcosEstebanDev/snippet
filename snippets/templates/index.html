@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="my-3">Public Snippets</h1>
+    <form method="get" class="mb-4">
+        <div class="form-group">
+            <label for="language" class="form-label h5">Filter by Language:</label>
+            <select name="language" id="language" class="form-control form-select" onchange="this.form.submit()">
+                <option value="">All Languages</option>
+                {% for language in languages %}
+                    <option value="{{ language.name }}" {% if language.name == selected_language %}selected{% endif %}>{{ language.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+    <div class="row">
+        {% for snippet in snippets %}
+            <div class="col-md-4 mb-4">
+                <div class="card snippet-card shadow-sm" style="height: 100%;">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between">
+                        <a href="{% url 'snippet_detail' id=snippet.id %}" class="text-white">{{ snippet.name }}</a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>{{ snippet.description }}</strong></p>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text"><small class="text-muted">Created by {{ snippet.user__username }}</small></p>
+                            <p class="card-text"><small class="text-muted">{{ snippet.created }}</small></p>
+                        </div>
+                        <pre><code>{{ snippet.code }}</code></pre>
+                        <a href="{% url 'snippet_detail' id=snippet.id %}" class="btn btn-primary mt-2">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

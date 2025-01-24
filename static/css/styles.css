@@ -1,0 +1,19 @@
+/* ...existing styles... */
+
+.code-snippet {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+/* Pygments styles */
+.highlight {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+}
+
+/* ...existing styles... */
