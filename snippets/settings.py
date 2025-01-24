@@ -1,5 +1,9 @@
 # ...existing code...
 
+DEBUG = False
+
+# ...existing code...
+
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -13,5 +17,6 @@ INSTALLED_APPS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'  # or 'bootstrap5' if you are using Bootstrap 5
+
 
 # ...existing code...
