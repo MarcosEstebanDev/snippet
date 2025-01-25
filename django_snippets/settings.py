@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'web-production-775a.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = [
-    'web-production-775a.up.railway.app',
+   'https://*' 'https://web-production-775a.up.railway.app',
 ]
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'whitenoise.runserver_nostatic',
     "crispy_forms",
 ]
 
