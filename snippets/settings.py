@@ -16,6 +16,9 @@ INSTALLED_APPS = [
     # ...existing code...
 ]
 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'web-production-775a.up.railway.app']
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'  # or 'bootstrap5' if you are using Bootstrap 5
 
 STATIC_URL = '/static/'
