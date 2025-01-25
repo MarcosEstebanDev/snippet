@@ -16,18 +16,20 @@
     <div class="row">
         {% for snippet in snippets %}
             <div class="col-md-4 mb-4">
-                <div class="card snippet-card shadow-sm" style="height: 100%;">
+                <div class="card snippet-card shadow-sm h-100 d-flex flex-column">
                     <div class="card-header bg-primary text-white d-flex justify-content-between">
                         <a href="{% url 'snippet_detail' id=snippet.id %}" class="text-white">{{ snippet.name }}</a>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body flex-grow-1">
                         <p class="card-text"><strong>{{ snippet.description }}</strong></p>
                         <div class="d-flex justify-content-between">
                             <p class="card-text"><small class="text-muted">Created by {{ snippet.user.username }}</small></p>
                             <p class="card-text"><small class="text-muted">{{ snippet.created }}</small></p>
                         </div>
                         <pre><code>{{ snippet.code }}</code></pre>
-                        <a href="{% url 'snippet_detail' id=snippet.id %}" class="btn btn-primary mt-2">View Details</a>
+                    </div>
+                    <div class="card-footer mt-auto">
+                        <a href="{% url 'snippet_detail' id=snippet.id %}" class="btn btn-primary w-100">View Details</a>
                     </div>
                 </div>
             </div>
