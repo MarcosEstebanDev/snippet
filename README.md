@@ -18,6 +18,44 @@ Este proyecto fue desarrollado utilizando el framework Django. A continuación, 
 7. **Pygments**: Se utilizó Pygments para resaltar la sintaxis de los snippets de código, mejorando la legibilidad y presentación.
 8. **Pruebas**: Se realizaron pruebas para asegurar el correcto funcionamiento de la aplicación.
 
+## Organización de Carpetas
+
+La estructura de carpetas del proyecto es la siguiente:
+
+```
+snippet/
+├── manage.py
+├── snippet/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   ├── asgi.py
+│   ├── ...
+├── snippets/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── ...
+├── templates/
+│   ├── ...
+├── static/
+│   ├── ...
+├── requirements.txt
+└── ...
+
+```
+
+## URL de Despliegue
+
+La aplicación está desplegada en la siguiente URL:
+
+[web-production-775a.up.railway.app](https://web-production-775a.up.railway.app)
+
 ## Flujo de la Aplicación
 
 1. **Inicio de sesión**: Los usuarios deben registrarse e iniciar sesión para poder crear, editar y eliminar snippets.
